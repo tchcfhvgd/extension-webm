@@ -19,7 +19,7 @@ class WebmPlayer extends Bitmap
 {
 	static inline var BYTES_PER_SAMPLE = 4 * 8192;
 	static var BLANK_BYTES:ByteArray;
-	public static var SKIP_STEP_LIMIT = 0;
+	public var SKIP_STEP_LIMIT = 0;
 
 	public var frameRate(default, null):Float;
 	public var duration(default, null):Float;
@@ -36,11 +36,11 @@ class WebmPlayer extends Bitmap
 	var lastDecodedVideoFrame = 0.0;
 	var lastRequestedVideoFrame = 0.0;
 	var playing = false;
-	var renderedCount = 0;
+	public var renderedCount = 0;
 	var renderedCount2 = 0;
 	var lastDecodedVideoFrame2 = 0.0;
 	var fkingElapsed = 0.0;
-	var wasHitOnce = false;
+	public var wasHitOnce = false;
 	
 	public function new()
 	{
